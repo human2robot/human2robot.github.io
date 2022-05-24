@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-GK0WSDMTFY"></script>
+  <script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-GK0WSDMTFY');
+  </script>
+  <meta charset="utf-8">
+  <meta name="description" content="Human-to-Robot Imitation in the Wild">
+  <meta name="keywords" content="Locomotion, Biomechanics, Energetics, Reinforcement Learning, Emergent Behaviors">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Human-to-Robot Imitation in the Wild</title>
+
+  <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
+        rel="stylesheet">
+
+  <link rel="stylesheet" href="./static/css/bulma.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-carousel.min.css">
+  <link rel="stylesheet" href="./static/css/bulma-slider.min.css">
+  <link rel="stylesheet" href="./static/css/fontawesome.all.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  <link rel="stylesheet" href="./static/css/index.css">
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="./static/js/fontawesome.all.min.js"></script>
+  <script src="./static/js/bulma-carousel.min.js"></script>
+  <script src="./static/js/bulma-slider.min.js"></script>
+  <script src="./static/js/index.js"></script>
+
+  <link rel="icon" href="./favicon.ico?">
+
+  <meta property="og:site_name" content="Human-to-Robot Imitation in the Wild" />
+  <meta property="og:type" content="video.other" />
+  <meta property="og:title" content="Human-to-Robot Imitation in the Wild" />
+  <meta property="og:url" content="https://human2robot.github.io/" />
+  <meta property="og:image" content="https://human2robot.github.io/static/images/preview.jpg" />
+  <meta property="og:image:secure" content="https://human2robot.github.io/static/images/preview.jpg" />
+  <meta property="og:video" content="https://www.youtube.com/embed/bBWyk1e6maY" />
+  <meta property="og:video:secure" content="https://www.youtube.com/embed/bBWyk1e6maY" />
+  
+  <meta property="article:publisher" content="https://human2robot.github.io" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Human-to-Robot Imitation in the Wild" />
+  <meta name="twitter:url" content="https://human2robot.github.io/" />
+  <meta name="twitter:image" content="https://human2robot.github.io/static/images/preview.jpg" />
+  <meta property="og:image:width" content="1600" />
+  <meta property="og:image:height" content="900" />
+
+  <script src="https://www.youtube.com/iframe_api"></script>
+  <meta name="twitter:card" content="player" />
+  <meta name="twitter:image" content="https://human2robot.github.io/static/images/preview.jpg" />
+  <meta name="twitter:player" content="https://www.youtube.com/embed/bBWyk1e6maY" />
+  <meta name="twitter:player:width" content="640" />
+  <meta name="twitter:player:height" content="360" />
+
+
+</head>
+<body>
+
+<section class="hero">
+  <div class="hero-body">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column has-text-centered">
+          <h1 class="title is-1 publication-title"> Human-to-Robot Imitation in the Wild </h1>
+          <div class="is-size-5 publication-authors">
+            <span class="author-block">
+              <a href="https://www.cs.cmu.edu/~sbahl2/">Shikhar Bahl</a>&nbsp;&nbsp;&nbsp;
+              <a href="http://www.cs.cmu.edu/~abhinavg/">Abhinav Gupta</a>&nbsp;&nbsp;&nbsp;
+              <a href="https://www.cs.cmu.edu/~dpathak/">Deepak Pathak</a>
+              <br />Carnegie Mellon University
+              <span class="brmod">RSS 2022</span>
+            </span>
+          </div>
+          <div class="column has-text-centered">
+            <div class="publication-links">
+              <!-- PDF Link. -->
+              <span class="link-block">
+                <a href="./resources/paper.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fas fa-file-pdf"></i>
+                  </span>
+                  <span>Paper</span>
+                </a>
+              </span>
+              <!-- arXiv Link. -->
+              <span class="link-block">
+                <a href="./resources/none.pdf"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="ai ai-arxiv"></i>
+                  </span>
+                  <span>arXiv</span>
+                </a>
+              </span>
+              <!-- Video Link. -->
+              <span class="link-block">
+                <a href="#method_video"
+                   class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <i class="fab fa-youtube"></i>
+                  </span>
+                  <span>Video</span>
+                </a>
+              </span>
+              <!-- Code Link. -->
+              <span class="link-block">
+                <a href="https://github.com/human2robot/" class="external-link button is-normal is-rounded is-dark">
+                  <span class="icon">
+                      <svg class="svg-inline--fa fa-github fa-w-16" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="github" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512" data-fa-i2svg=""><path fill="currentColor" d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"></path></svg><!-- <i class="fab fa-github"></i> Font Awesome fontawesome.com -->
+                  </span>
+                  <span>Code</span>
+                </a>
+              </span>
+
+            </div>
+
+          </div>
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="hero teaser">
+  <div class="hero-body">
+    <div class="columns is-centered">
+      <div class="column is-9">
+        <div class="aligncenter">
+          <!-- <video autoplay muted loop playsinline style="width: 45%; border: 1px solid #bbb; border-radius: 10px; margin: 2.0%;">
+            <source src="./resources/glass_door_comparison_teaser.mp4" type="video/mp4">
+          </video>
+          <video autoplay muted loop playsinline style="width: 45%; border: 1px solid #bbb; border-radius: 10px; margin: 2.0%;">
+            <source src="./resources/human_obstacle_comparison_teaser.mp4" type="video/mp4">
+          </video> -->
+          <center><img src="resources/grid_rss_2.gif" style="width: 85%; max-width: 85%; height: auto; margin-left: auto; margin-right: auto;"></center>
+
+          <h2 class="subtitle has-text-centered">
+            <strong>Can robots learn manipulation from watching humans? </strong>
+          </h2>
+      </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<section class="section">
+  <div class="container">
+
+    <!-- Abstract. -->
+    <div class="columns is-centered has-text-centered">
+      <div class="column is-two-thirds">
+        <h2 class="title is-2">Abstract</h2>
+        <div class="content has-text-justified">
+          <p>
+            We approach the problem of learning by watching humans in the wild. While traditional approaches in Imitation and Reinforcement Learning are promising for learning in the real world, they are either sample inefficient or are constrained to lab settings. Meanwhile, there has been a lot of success in processing passive, unstructured human data. We propose tackling this problem via an efficient one-shot robot learning algorithm, centered around learning from a third person perspective. We call our method WHIRL: In the Wild Human-Imitated Robot Learning. In WHIRL, we aim to use human videos to extract a prior over the intent of the demonstrator, and use this to initialize our agent's policy. We introduce an efficient real-world policy learning scheme, that improves over the human prior using interactions. Our key contributions are a simple sampling-based policy optimization approach, a novel objective function for aligning human and robot videos as well as an exploration method to boost sample efficiency. We show, one-shot, generalization and success in real world settings, including 20 different manipulation tasks in the wild.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--/ Abstract. -->
+
+
+  
+  <br/>
+  <br/>
+  <div id="method_video" class="columns is-centered has-text-centered">
+    <div class="column is-two-thirds">
+      <h2 class="title is-2">Video</h2>
+      <div class="publication-video">
+        <iframe width="720" height="300" src="https://www.youtube.com/embed/bBWyk1e6maY" title="Human-to-Robot Imitation in the Wild" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>      
+
+    </div>
+  </div>
+  <!--/ Paper video. -->
+</section>
+
+
+<!-- <section class="section">
+  <div class="container">
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-2" style="text-align: center;">WHIRL: In-the-Wild Human Imitating Robot Learning</h2>
+        <tr>
+          <td>
+            <br>
+            <div class="columns is-centered has-text-centered">
+              <img src="./resources/method_v4.png" style="width: 80%;"></img>
+            </div>
+          </td>
+        </tr>
+        <div class="is-vcentered interpolation-panel">
+          <div class="content has-text-centered">
+            <p style = "font-size: 18px">
+              Our method, WHIRL, provides an efficient way to learn from human videos. We have three core components: we first <b>watch</b> and obtain human priors such as hand movement and object interactions. We <b>repeat</b> these priors by interacting in the real world, by both trying to achieve task success and explore around the prior. We <b>improve</b> our task policy by leveraging our agent-agnostic objective function which aligns human and robot videos.
+            </p>
+          </div>
+        </div>
+    </div>
+  </div>
+</section> -->
+
+
+<section>
+<div class="columns is-centered">
+  <div class="column is-full-width">
+    <h2 class="title is-2" style="text-align: center;">Similar Energy Consumption Trend<br \>between Our Robot and Horses</h2>
+    
+    <div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <!-- <img style="width: 1.5%;" src="./resources/divider.png"> -->
+        <img style="border: 1px solid #bbb; border-radius: 10px; width: 36.75%;" src="./resources/horse.png">&nbsp;&nbsp;&nbsp;&nbsp;<img style="border: 1px solid #bbb; border-radius: 10px; width: 40%;" src="./resources/mpc_energy.png">
+      </div>
+      <div class="content has-text-centered">
+        <p>
+          In Biomechanics, Froude number is a metric characterizing gaits of quadrupeds and bipeds. Animals with a similar morphology but with different sizes tend to use the same gait when moving with equal Froude numbers. Our robot has similar Froude numbers as horses and sheep. The plot on the left <strong>(Hoyt et al. 1981)</strong> analyzes the energy consumption of different horse gaits across different speeds. Shown on the right, the energy consumption plot of our robot has a similar trend, which also validates certain gaits will emerge at certain speeds if we minimize the energy consumption. 
+        </p>
+      </div>
+    </div>
+    <br>
+    <div class="is-vcentered interpolation-panel">
+      <div class="content has-text-centered">
+        <video autoplay loop muted playsinline src="./resources/gait_comparison.mp4" style="border: 1px solid #bbb; border-radius: 10px; width: 80%;"></video>
+      </div>
+      <div class="content has-text-centered">
+        <p>
+          Foot Contact Plots of Walking, Trotting, Bouncing (Galloping)
+        </p>
+      </div>
+    </div>
+
+  </div>
+</div>
+</section>
+
+
+
+
+
+
+
+<section>
+<div class="columns is-centered">
+<div class="column is-full-width">
+
+<h2 class="title is-2" style="text-align: center;">Task Videos</h2>
+<div class="aligncenter">
+  <br>
+    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+      <source src="./resources/w_fridge.mp4" type="video/mp4">
+    </video>&nbsp;&nbsp;&nbsp;
+    <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+      <source src="./resources/w_tap.mp4" type="video/mp4">
+    </video>
+  <br/>
+
+  <br>
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_plug.mp4" type="video/mp4">
+  </video>&nbsp;&nbsp;&nbsp;
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_board.mp4" type="video/mp4">
+  </video>
+  <br/>
+
+  <br>
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_drawer.mp4" type="video/mp4">
+  </video>&nbsp;&nbsp;&nbsp;
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_can.mp4" type="video/mp4">
+  </video>
+  </br>
+
+  <br>
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_dish.mp4" type="video/mp4">
+  </video>&nbsp;&nbsp;&nbsp;
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_dice.mp4" type="video/mp4">
+  </video>
+</br>
+
+  <br>
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_cup.mp4" type="video/mp4"  >
+  </video>&nbsp;&nbsp;&nbsp;
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_chair.mp4" type="video/mp4">
+  </video>
+</br>
+
+  <br>
+  <video onmouseover="this.play()" onmouseout="this.pause();this.currentTime=0;" width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_door.mp4" type="video/mp4"  >
+  </video>&nbsp;&nbsp;&nbsp;
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_light.mp4" type="video/mp4">
+  </video>
+  </br>
+
+  <br>
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_hat.mp4" type="video/mp4"  >
+  </video>&nbsp;&nbsp;&nbsp;
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_hang.mp4" type="video/mp4">
+  </video>
+  </br>
+
+  <br>
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_ball.mp4" type="video/mp4" >
+  </video>&nbsp;&nbsp;&nbsp;
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_fold.mp4" type="video/mp4">
+  </video>
+</br>
+
+  <br>
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_bag.mp4" type="video/mp4"  >
+  </video>&nbsp;&nbsp;&nbsp;
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_lid.mp4" type="video/mp4">
+  </video>
+</br>
+
+  <br>
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_obj.mp4" type="video/mp4" style="padding:20px;border:1px solid black;">
+  </video>&nbsp;&nbsp;&nbsp;
+  <video width="640" height="480" loop muted controls picture-in-picture>
+    <source src="./resources/w_toaster.mp4" type="video/mp4" style="padding:20px;border:1px solid black;">
+  </video>
+  </br>
+
+
+
+<div class="is-vcentered interpolation-panel">
+  <div class="content has-text-centered">
+  <!-- <div class="container content"> -->
+<!-- <div class="column is-two-thirds">  -->
+<p style = "font-size: 18px">
+  We perform 20 different tasks in the wild. The only input to the robot is a single human video. We train our method for about 1-2 hours for each of these tasks. 
+</p>
+</div>
+</div>
+</div>
+</div>
+</div>d
+</section>
+<br><br>
+
+
+
+
+
+
+
+
+<section class="section" id="BibTeX">
+  <div class="container content">
+    <h2 class="titile">BibTeX</h2>
+    <pre><code>@inproceedings{bahl2022human,
+  author    = {Bahl, Shikhar and Gupta, Abhinav and Pathak, Deepak},
+  title     = {Human-to-Robot Imitation in the Wild},
+  journal   = {RSS},
+  year      = {2022},
+}</code></pre>
+  </div>
+</section>
+
+
+<div class="is-vcentered interpolation-panel">
+  <div class="container content">
+    <p style = "font-size: 16px">
+      We thank Jason Zhang, Yufei Ye, Aravind Sivakumar, Sudeep Dasari and Russell Mendonca for very fruitful discussions and are grateful to Ananye Agarwal, Alex Li, Murtaza Dalal and Homanga Bharadhwaj for comments on early drafts of this paper. AG was supported by ONR YIP. The work was supported by NSF IIS-2024594 and ONR N00014-22-1-2096. 
+    </p>
+  </div>
+</div>
+
+
+
+<footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <a href="./resources/CoRL-Energy-Locomotion.pdf" class="large-font bottom_buttons">
+        <i class="fas fa-file-pdf"></i>
+      </a>
+      <!-- <a class="large-font bottom_buttons" disabled>
+        <i class="fab fa-github"></i>
+      </a> -->
+      <br />
+      <p>Page template borrowed from <a href="https://nerfies.github.io"><span class="dnerf">Nerfies</span></a>, <a href="https://energy-locomotion.github.io/"><span class="dnerf">Energy Locomotion</span></a> and <a href="https://robotic-telekinesis.github.io/"><span class="dnerf">Robotic Telekinesis</span></a>.</p>
+    </div>
+  </div>
+</footer>
+
+
+<!-- <footer class="footer">
+  <div class="container">
+    <div class="content has-text-centered">
+      <p>Page template borrowed from <a href="https://worldsheet.github.io/"><span class="dnerf">WorldSheet</span></a> and <a href="https://energy-locomotion.github.io/"><span class="dnerf">Energy-Locomotion</span></a>.</p>
+    </div>
+  </div>
+</footer> -->
+
+</body>
+</html>
